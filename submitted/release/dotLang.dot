@@ -1,0 +1,15 @@
+graph main {node[shape = rect label = "read
+(x)"]
+id1
+node[ordering = "in"]
+node[shape = rect label = "write"]
+id42
+node[ordering = "out"]
+node[shape = oval label = "id
+(x)"]
+id43
+node[ordering = "in"]
+id42--id43
+{rank = same; id1; id42}
+id1--id42
+}

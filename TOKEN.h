@@ -1,0 +1,39 @@
+#ifndef TOKEN_H
+#define TOKEN_H
+
+#include<string>
+
+enum TOKEN_NAMES {
+	SEMICOLON_TOKEN,
+	IF_TOEKN,
+	THEN_TOKEN,
+	ELSE_TOKEN,
+	END_TOKEN,
+	REPEAT_TOKEN,
+	UNTIL_TOKEN,
+	IDENTIFIER_TOKEN,
+	ASSIGN_TOKEN,
+	READ_TOKEN,
+	WRITE_TOKEN,
+	LESSTHAN_TOKEN,
+	EQUAL_TOKEN,
+	PLUS_TOKEN,
+	MINUS_TOKEN,
+	MULT_TOKEN,
+	DIV_TOKEN,
+	OPENBRACKET_TOKEN,
+	CLOSEBRACKET_TOKEN,
+	NUMBER_TOKEN,
+	INVALID_TOKEN
+};
+
+typedef struct TOKEN_STRUCT
+{
+	TOKEN_NAMES token_name;
+	std::string token_value;
+
+}Token_T;
+
+Token_T* init_token(TOKEN_NAMES token_name, std::string token_value);
+
+#endif
